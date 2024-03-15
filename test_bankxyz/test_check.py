@@ -1,3 +1,4 @@
+from test_bankxyz.data import data_last_name
 from test_bankxyz.test_step import *
 
 class TestBankChecks:
