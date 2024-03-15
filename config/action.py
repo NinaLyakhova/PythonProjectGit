@@ -7,7 +7,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 
 class SeleniumAction:
-    def __init__(self, driver):
+    def __init__(self, driver: object) -> object:
         self.driver = driver
 
     """ЭКШОНЫ"""
