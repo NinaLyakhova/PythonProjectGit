@@ -7,7 +7,7 @@ from test_saucedemo.test_data import *
 
 @pytest.fixture
 def browser():
-    gecko_path = r"../../../config/webdrivers/geckodriver.exe"
+    gecko_path = r"../../../config/geckodriver.exe"
     web_service = Service(gecko_path)
     driver = webdriver.Firefox(service=web_service)
     yield driver
@@ -23,7 +23,7 @@ class TestSaucedemo:
 #        input_field_user.send_keys(data_standard_user)
         input_field_password = browser.find_element(*locator_field_user_pass)
         input_field_password.send_keys(data_password)
-        selenium_helper.action_wait_on_page(1000)
+        action_wait_on_page(1000)
         selenium_helper.action_click_element(locator_button_login)
         print('Вход выполнен')
         return selenium_helper
@@ -85,7 +85,7 @@ class TestSaucedemo:
         input_field_last_name.send_keys(data_last_name)
         input_field_postal_code = browser.find_element(*locator_field_postal_code)
         input_field_postal_code.send_keys(data_zip_code)
-        selenium_helper.action_wait_on_page(1000)
+        action_wait_on_page(1000)
         selenium_helper.action_click_element(locator_button_submit)
         selenium_helper.action_click_element(locator_button_finish)
         print('Покупка выполнена')

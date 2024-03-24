@@ -41,7 +41,7 @@ def get_driver_path(browser_name):
 
 
 # Фикстура для создания браузера
-@pytest.fixture(params=['chrome'])
+@pytest.fixture(params=['opera'])
 def browser(request):
     browser_name = request.param
     driver_path = get_driver_path(browser_name)

@@ -1,4 +1,6 @@
 from selenium import webdriver
+from selenium.common import NoSuchElementException, TimeoutException
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
@@ -7,7 +9,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 
 class SeleniumAction:
-    def __init__(self, driver: object) -> object:
+    def __init__(self, driver):
         self.driver = driver
 
     """ЭКШОНЫ"""
@@ -48,7 +50,8 @@ class SeleniumAction:
         except TimeoutException:
             print(f"Ошибка ожидания текста '{expected_text}' в элементе {locator} в течение {timeout} секунд.")
 
-    def action_wait_on_page(self, milliseconds):  # ожидание
+    @staticmethod
+    def action_wait_on_page(milliseconds):  # ожидание
         seconds = milliseconds / 1000
         time.sleep(seconds)
         print(f"Ожидание завершено после {seconds:.2f} секунд")
@@ -222,13 +225,13 @@ class SeleniumAction:
         except Exception as e:
             print(f"Ошибка при переключении на окно, с дескриптором {window_handle}: {e}")
 
-    def action_close_current_window(self): # закрытие текущего окна барузера
+    def action_close_current_window(self):  # закрытие текущего окна барузера
         try:
             self.driver.close()
         except Exception as e:
             print(f"Ошибка при закрытии активного окна: {e}")
 
-    def action_close_other_windows(self): # закрытие всех окон барузера кроме текущего
+    def action_close_other_windows(self):  # закрытие всех окон барузера кроме текущего
         try:
             current_window_handle = self.driver.current_window_handle
             for handle in self.driver.window_handles:
@@ -239,7 +242,7 @@ class SeleniumAction:
         except Exception as e:
             print(f"Ошибка при закрытии других окон: {e}")
 
-    def action_maximize_window(self): # растягивание окна браузера на весь экран
+    def action_maximize_window(self):  # растягивание окна браузера на весь экран
         try:
             self.driver.maximize_window()
         except Exception as e:
@@ -273,7 +276,7 @@ class SeleniumAction:
 
     """ПРОВЕРКИ"""
 
-    def assert_check_element_in_elements(self, locator, text): # сверяет текст в элементе с заданным
+    def assert_check_element_in_elements(self, locator, text):  # сверяет текст в элементе с заданным
         elements = self.driver.find_elements(*locator)
         for element in elements:
             if text in element.text:
@@ -282,7 +285,7 @@ class SeleniumAction:
 
     """ПРОЧЕЕ"""
 
-    def get_all_elements(self): # делает список локаторов, вроде)
+    def get_all_elements(self):  # делает список локаторов, вроде)
         elements = self.driver.find_elements(By.XPATH, "//*")
         for element in elements:
             outer_html = element.get_attribute('outerHTML')
