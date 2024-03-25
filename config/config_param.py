@@ -8,6 +8,7 @@ from selenium.webdriver.edge.service import Service as EdgeService
 from selenium.webdriver.edge.options import Options as EdgeOptions
 from selenium.webdriver.ie.service import Service as IeService
 from selenium.webdriver.ie.options import Options as IeOptions
+
 from config.action import SeleniumAction
 import os
 
@@ -41,7 +42,7 @@ def get_driver_path(browser_name):
 
 
 # Фикстура для создания браузера
-@pytest.fixture(params=['opera'])
+@pytest.fixture(params=['firefox'])
 def browser(request):
     browser_name = request.param
     driver_path = get_driver_path(browser_name)
