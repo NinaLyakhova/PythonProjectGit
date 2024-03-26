@@ -41,7 +41,6 @@ def get_product(browser, selenium_action): # pytest -k get_product test_step.py
         selenium_action.action_click_element(locator_button_finish)
     yield get_product_function
 
-"""ПРОВЕРКИ"""
 
 @pytest.fixture
 def login_successful(browser):

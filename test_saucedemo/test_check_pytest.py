@@ -5,7 +5,6 @@ class TestCheckSaus:
     @pytest.mark.smoke_market
     def test_login_successful(browser, selenium_action, login, login_successful, logout):
         """Проверка входа"""
-        selenium_action.action_wait_on_page(10000)
         login()
         login_successful()
         logout()
@@ -32,3 +31,4 @@ class TestCheckSaus:
         get_product()
         get_product_successful()
         logout()
+

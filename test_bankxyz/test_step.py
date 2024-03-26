@@ -1,7 +1,7 @@
-from config.config_bankxyz import *
-from test_bankxyz.data import data_deposit, data_withdrawl, data_first_name, data_last_name, data_post_code
+from test_bankxyz.data import *
 from test_bankxyz.locator import *
-from config.config import *
+from config.config_param import *
+
 
 @pytest.fixture
 def login_bank_customer(browser, selenium_action): # pytest -k login test_step.py
