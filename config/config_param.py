@@ -16,7 +16,7 @@ import os
 # Функция для получения пути к драйверу
 def get_driver_path(browser_name):
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    webdriver_dir = os.path.join(current_dir, "webdrivers")
+    webdriver_dir = os.path.join(current_dir, "webdriver")
     if browser_name.lower() == 'chrome':
         return os.path.join(webdriver_dir, "chromedriver.exe")
     elif browser_name.lower() == 'chrome_mob':
