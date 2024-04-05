@@ -1,13 +1,16 @@
 from test_bankxyz.data import *
 from test_bankxyz.locator import *
 from config.config_param import *
-
+import allure
 
 @pytest.fixture
 def login_bank_customer(browser, selenium_action): # pytest -k login test_step.py
     def login_bank_customer_function():
         browser.get(driver_get_bankxyz)
         selenium_action.action_click_element(locator_button_login_customer)
+        allure.step("Делаем скришот:")
+        allure.attach(browser.get_screenshot_as_png(), name="screenshot_login",
+                      attachment_type=allure.attachment_type.PNG)
     yield login_bank_customer_function
 
 
@@ -17,6 +20,9 @@ def login_bank_potter(browser, selenium_action): # pytest -k login test_step.py
         selenium_action.action_click_element(locator_button_your_name)
         selenium_action.action_click_element(locator_button_harry_potter)
         selenium_action.action_click_element(locator_button_your_name_login)
+        allure.step("Делаем скришот:")
+        allure.attach(browser.get_screenshot_as_png(), name="screenshot_login",
+                      attachment_type=allure.attachment_type.PNG)
     yield login_bank_potter_function
 
 @pytest.fixture
@@ -25,6 +31,9 @@ def login_bank_customer_hermoine(browser, selenium_action): # pytest -k login te
         selenium_action.action_click_element(locator_select_hermoine)
         selenium_action.action_wait_on_page(1000)
         selenium_action.action_click_element(locator_select_login_button)
+        allure.step("Делаем скришот:")
+        allure.attach(browser.get_screenshot_as_png(), name="screenshot_login",
+                      attachment_type=allure.attachment_type.PNG)
     yield login_bank_customer_hermoine_function
 
 @pytest.fixture
@@ -33,18 +42,27 @@ def login_bank_weasly(browser, selenium_action):  # pytest -k login test_step.py
             selenium_action.action_click_element(locator_button_your_name)
             selenium_action.action_click_element(locator_button_ron_weasly)
             selenium_action.action_click_element(locator_button_your_name_login)
+            allure.step("Делаем скришот:")
+            allure.attach(browser.get_screenshot_as_png(), name="screenshot_login",
+                  attachment_type=allure.attachment_type.PNG)
     yield login_bank_weasly_function
 
 @pytest.fixture
 def bank_home(browser, selenium_action):
     def bank_home_function():
             selenium_action.action_click_element(locator_button_bank_home)
+            allure.step("Делаем скришот:")
+            allure.attach(browser.get_screenshot_as_png(), name="screenshot_login",
+                  attachment_type=allure.attachment_type.PNG)
     yield bank_home_function
 
 @pytest.fixture
 def logout_bank(browser, selenium_action):
     def logout_bank_function():
             selenium_action.action_click_element(locator_button_logout)
+            allure.step("Делаем скришот:")
+            allure.attach(browser.get_screenshot_as_png(), name="screenshot_login",
+                          attachment_type=allure.attachment_type.PNG)
     yield logout_bank_function
 
 @pytest.fixture
@@ -57,6 +75,9 @@ def deposit(browser, selenium_action):
             selenium_action.action_fill_input(locator_field_amount, data_deposit)
             selenium_action.action_wait_on_page(1000)
             selenium_action.action_click_element(locator_confirm_deposit)
+            allure.step("Делаем скришот:")
+            allure.attach(browser.get_screenshot_as_png(), name="screenshot_login",
+                          attachment_type=allure.attachment_type.PNG)
     yield deposit_function
 
 @pytest.fixture
@@ -69,6 +90,9 @@ def withdrawl(browser, selenium_action):
             selenium_action.action_fill_input(locator_field_amount, data_withdrawl)
             selenium_action.action_wait_on_page(1000)
             selenium_action.action_click_element(locator_confirm_withdrawl)
+            allure.step("Делаем скришот:")
+            allure.attach(browser.get_screenshot_as_png(), name="screenshot_login",
+                          attachment_type=allure.attachment_type.PNG)
     yield withdrawl_function
 
 @pytest.fixture
@@ -79,6 +103,9 @@ def transaction(browser, selenium_action):
             selenium_action.action_click_element(locator_scroll_right)
             selenium_action.action_wait_on_page(1000)
             selenium_action.action_click_element(locator_transactions_reset)
+            allure.step("Делаем скришот:")
+            allure.attach(browser.get_screenshot_as_png(), name="screenshot_login",
+                          attachment_type=allure.attachment_type.PNG)
     yield transaction_function
 
 @pytest.fixture
@@ -86,6 +113,9 @@ def login_bank_manager(browser, selenium_action):
     def login_bank_manager_function():
         browser.get(driver_get_bankxyz)
         selenium_action.action_click_element(locator_button_login_bank_manager)
+        allure.step("Делаем скришот:")
+        allure.attach(browser.get_screenshot_as_png(), name="screenshot_login",
+                      attachment_type=allure.attachment_type.PNG)
     yield login_bank_manager_function
 
 @pytest.fixture
@@ -100,6 +130,9 @@ def add_customer(browser, selenium_action):
             selenium_action.action_wait_on_page(1000)
             selenium_action.action_click_element(locator_button_add_customer_confirm)
             selenium_action.action_accept_alert()
+            allure.step("Делаем скришот:")
+            allure.attach(browser.get_screenshot_as_png(), name="screenshot_login",
+                          attachment_type=allure.attachment_type.PNG)
     yield add_customer_function
 
 @pytest.fixture

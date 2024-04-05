@@ -1,7 +1,8 @@
-from test_bankxyz.data import data_last_name
 from test_bankxyz.test_step import *
 
+
 class TestBankChecks:
+
     def test_login_successful_bank(self, browser, selenium_action, login_bank_customer):
         """Проверка входа"""
         login_bank_customer()
@@ -19,7 +20,8 @@ class TestBankChecks:
         print('Вход Гарри Поттер успешный')
         selenium_action.action_close_current_window()
 
-    def test_login_and_back_home_successful_potter(self, browser, selenium_action, login_bank_customer, login_bank_potter, bank_home):
+    def test_login_and_back_home_successful_potter(self, browser, selenium_action, login_bank_customer,
+                                                   login_bank_potter, bank_home):
         """Проверка входа Гарри Поттер и возврат на главную страницу"""
         login_bank_customer()
         login_bank_potter()
@@ -32,7 +34,8 @@ class TestBankChecks:
         print('Переход на главную страницу успешный')
         selenium_action.action_close_current_window()
 
-    def test_login_successful_weasly(self, browser, selenium_action, login_bank_customer, login_bank_weasly, logout_bank):
+    def test_login_successful_weasly(self, browser, selenium_action, login_bank_customer, login_bank_weasly,
+                                     logout_bank):
         """Проверка входа Рон Уизли и логаут"""
         login_bank_customer()
         login_bank_weasly()
@@ -56,7 +59,8 @@ class TestBankChecks:
         print('Депонирование произведено успешно')
         selenium_action.action_close_current_window()
 
-    def test_successful_withdrawl_potter(self, browser, selenium_action, login_bank_customer, login_bank_potter, deposit, withdrawl):
+    def test_successful_withdrawl_potter(self, browser, selenium_action, login_bank_customer, login_bank_potter,
+                                         deposit, withdrawl):
         """Проверка списания средств"""
         login_bank_customer()
         login_bank_potter()
@@ -68,7 +72,8 @@ class TestBankChecks:
         print('Списание произведено успешно')
         selenium_action.action_close_current_window()
 
-    def test_successful_fail_withdrawl_potter(self, browser, selenium_action, login_bank_customer, login_bank_potter, deposit, withdrawl):
+    def test_successful_fail_withdrawl_potter(self, browser, selenium_action, login_bank_customer, login_bank_potter,
+                                              deposit, withdrawl):
         """Проверка списания средств"""
         login_bank_customer()
         login_bank_potter()
@@ -79,7 +84,8 @@ class TestBankChecks:
         print('Списание произведено успешно')
         selenium_action.action_close_current_window()
 
-    def test_successful_transaction_potter(self, browser, selenium_action, login_bank_customer, login_bank_potter, deposit, withdrawl, transaction):
+    def test_successful_transaction_potter(self, browser, selenium_action, login_bank_customer, login_bank_potter,
+                                           deposit, withdrawl, transaction):
         """Проверка отчета об операциях"""
         login_bank_customer()
         login_bank_potter()
@@ -105,8 +111,9 @@ class TestBankChecks:
         add_customer()
         selenium_action.action_wait_on_page(1000)
         list_customer()
-        contains_farell = selenium_action.assert_check_element_in_elements(locator_assert_td_ng_binding_1, data_last_name)
-        print("Строка не найдена",contains_farell)
+        contains_farell = selenium_action.assert_check_element_in_elements(locator_assert_td_ng_binding_1,
+                                                                           data_last_name)
+        print("Строка не найдена", contains_farell)
         assert contains_farell == True, "Cтрока найдена"
         print('Клиент добавлен')
         selenium_action.action_close_current_window()
