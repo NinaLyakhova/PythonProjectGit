@@ -49,7 +49,7 @@ def browser(request):
     if browser_name.lower() == 'chrome':
         service = ChromeService(executable_path=driver_path)
         options_c = ChromeOptions()
-        # options_c.add_argument("-headless")
+        options_c.add_argument("-headless")
         options_c.add_argument("user-agent=Firefox")
         driver = webdriver.Chrome(service=service, options=options_c)
     elif browser_name.lower() == 'chrome_mob':
