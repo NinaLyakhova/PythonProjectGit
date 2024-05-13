@@ -60,7 +60,7 @@ def get_product(browser, selenium_action): # pytest -k get_product test_step.py
 
 @pytest.fixture
 def login_successful(browser):
-    def test_login_successful_function():
+    def test_login_successful_function(browser):
         assert "https://www.saucedemo.com/inventory.html" in browser.current_url.lower()
         print('\n--- Вход успешный ---')
     yield test_login_successful_function

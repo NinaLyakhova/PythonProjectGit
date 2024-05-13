@@ -1,0 +1,24 @@
+Ожидание завершено после 1.00 секунд
+Счет открыт успешно
+Ошибка при закрытии активного окна: Alert Text: Account created successfully with account Number :1016
+Message: unexpected alert open: {Alert text : Account created successfully with account Number :1016}
+  (Session info: chrome-headless-shell=123.0.6312.88)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7A1AA7062+63090]
+	(No symbol) [0x00007FF7A1A12CB2]
+	(No symbol) [0x00007FF7A18AEC65]
+	(No symbol) [0x00007FF7A1924996]
+	(No symbol) [0x00007FF7A1916FA0]
+	(No symbol) [0x00007FF7A18E83A8]
+	(No symbol) [0x00007FF7A18E9441]
+	GetHandleVerifier [0x00007FF7A1EA25CD+4238301]
+	GetHandleVerifier [0x00007FF7A1EDF72D+4488509]
+	GetHandleVerifier [0x00007FF7A1ED7A0F+4456479]
+	GetHandleVerifier [0x00007FF7A1B805A6+953270]
+	(No symbol) [0x00007FF7A1A1E57F]
+	(No symbol) [0x00007FF7A1A19254]
+	(No symbol) [0x00007FF7A1A1938B]
+	(No symbol) [0x00007FF7A1A09BC4]
+	BaseThreadInitThunk [0x00007FFA998E257D+29]
+	RtlUserThreadStart [0x00007FFA9AF0AA48+40]
+

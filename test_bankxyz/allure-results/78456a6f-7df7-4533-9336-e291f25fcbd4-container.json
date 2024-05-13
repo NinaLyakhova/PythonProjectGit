@@ -1,0 +1,1 @@
+{"uuid": "f8464382-579c-4beb-95a8-213253bbf450", "children": ["7a597c1e-a319-4b25-a342-4f557cb2ea26"], "befores": [{"name": "login_bank_customer", "status": "passed", "start": 1712324368045, "stop": 1712324368045}], "afters": [{"name": "login_bank_customer::0", "status": "passed", "start": 1712324379651, "stop": 1712324379651}], "start": 1712324368045, "stop": 1712324379651}

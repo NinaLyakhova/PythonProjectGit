@@ -1,0 +1,1 @@
+{"uuid": "ec240eac-9d90-48f8-8e33-509902c67f9b", "children": ["90f05326-72fd-4d33-97bc-7746d0b2d360"], "befores": [{"name": "bank_home", "status": "passed", "start": 1712324291214, "stop": 1712324291214}], "afters": [{"name": "bank_home::0", "status": "passed", "start": 1712324296303, "stop": 1712324296303}], "start": 1712324291214, "stop": 1712324296303}

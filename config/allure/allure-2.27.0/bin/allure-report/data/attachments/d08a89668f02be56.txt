@@ -1,0 +1,35 @@
+Ожидание завершено после 1.00 секунд
+Ошибка ввода в элемент ('xpath', '/html/body/div/div/div[2]/div/div[4]/div/form/div/input') текста '500324': Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=123.0.6312.86); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF7ACA27062+63090]
+	(No symbol) [0x00007FF7AC992CB2]
+	(No symbol) [0x00007FF7AC82EC65]
+	(No symbol) [0x00007FF7AC833D21]
+	(No symbol) [0x00007FF7AC836159]
+	(No symbol) [0x00007FF7AC836200]
+	(No symbol) [0x00007FF7AC875664]
+	(No symbol) [0x00007FF7AC86D2BF]
+	(No symbol) [0x00007FF7AC896FDA]
+	(No symbol) [0x00007FF7AC86A00A]
+	(No symbol) [0x00007FF7AC8971F0]
+	(No symbol) [0x00007FF7AC8B3412]
+	(No symbol) [0x00007FF7AC896D83]
+	(No symbol) [0x00007FF7AC8683A8]
+	(No symbol) [0x00007FF7AC869441]
+	GetHandleVerifier [0x00007FF7ACE225CD+4238301]
+	GetHandleVerifier [0x00007FF7ACE5F72D+4488509]
+	GetHandleVerifier [0x00007FF7ACE57A0F+4456479]
+	GetHandleVerifier [0x00007FF7ACB005A6+953270]
+	(No symbol) [0x00007FF7AC99E57F]
+	(No symbol) [0x00007FF7AC999254]
+	(No symbol) [0x00007FF7AC99938B]
+	(No symbol) [0x00007FF7AC989BC4]
+	BaseThreadInitThunk [0x00007FFDD045257D+29]
+	RtlUserThreadStart [0x00007FFDD0A2AA58+40]
+
+Ожидание завершено после 1.00 секунд
+Ожидание завершено после 1.00 секунд
+Ожидание завершено после 1.00 секунд
+Ожидание завершено после 1.00 секунд
+Отчет об операциях сформирован
